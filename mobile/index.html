@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Golf Cart Shop OS · Mobile — Lakeside</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: { brand:{
+    50:'#ecfdf5',100:'#d1fae5',200:'#a7f3d0',300:'#6ee7b7',400:'#34d399',
+    500:'#10b981',600:'#059669',700:'#047857',800:'#065f46',900:'#064e3b'
+  } } } } }
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.0/dist/driver.css" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-slate-100 text-slate-900 antialiased">
+
+<!-- Desk frame (visible on wide screens, hidden on small) -->
+<div id="stage" class="min-h-screen w-full grid place-items-center p-4">
+
+  <div class="text-center mb-4 hidden md:block">
+    <div class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Golf Cart Shop OS — Mobile</div>
+    <div class="text-sm text-slate-500">Field tool · Lakeside Golf Carts</div>
+  </div>
+
+  <!-- Phone frame -->
+  <div id="phone" class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-screen" id="phone-screen">
+
+      <!-- Status bar -->
+      <div id="status-bar" class="status-bar">
+        <span class="time">9:41</span>
+        <span class="icons">
+          <i data-lucide="signal" class="w-3.5 h-3.5"></i>
+          <i data-lucide="wifi" class="w-3.5 h-3.5"></i>
+          <i data-lucide="battery-full" class="w-4 h-4"></i>
+        </span>
+      </div>
+
+      <!-- App header (per-screen) -->
+      <header id="app-header" class="app-header"></header>
+
+      <!-- Screen mount -->
+      <main id="screen" class="screen"></main>
+
+      <!-- Bottom tab bar -->
+      <nav id="tabbar" class="tabbar"></nav>
+
+      <!-- Bottom sheet mount -->
+      <div id="sheet-mount"></div>
+
+      <!-- Toast -->
+      <div id="toast-wrap"></div>
+    </div>
+    <div class="phone-home-indicator"></div>
+  </div>
+
+  <div class="text-center mt-4 text-xs text-slate-400 hidden md:block">
+    Open on your phone for the real thing — or rotate, this layout adapts.
+  </div>
+</div>
+
+<!-- Welcome overlay -->
+<div id="welcome" class="hidden">
+  <div class="welcome-card">
+    <div class="w-12 h-12 mx-auto rounded-2xl bg-brand-600 text-white grid place-items-center mb-3">
+      <i data-lucide="smartphone" class="w-6 h-6"></i>
+    </div>
+    <div class="text-base font-bold text-center">Shop OS — in your pocket</div>
+    <p class="text-xs text-slate-600 text-center mt-1.5 mb-4">Walk through the mobile app as a Lakeside technician on a typical shift. About 45 seconds.</p>
+    <div class="flex gap-2">
+      <button id="welcome-skip" class="flex-1 px-3 py-2.5 text-sm text-slate-600 rounded-xl bg-slate-100">Skip</button>
+      <button id="welcome-start" class="flex-1 px-3 py-2.5 text-sm bg-brand-600 text-white font-semibold rounded-xl">Start tour</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/mockData.js"></script>
+<script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.0/dist/driver.js.iife.js"></script>
+<script src="js/tour.js"></script>
+</body>
+</html>

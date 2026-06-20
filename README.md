@@ -2,6 +2,10 @@
 
 A static, front-end-only walkthrough of **Golf Cart Shop OS** for the fictional **Lakeside Golf Carts**. No backend, no build step.
 
+**Two demos in this repo:**
+- `index.html` — desktop / SaaS dashboard
+- `mobile/index.html` — phone-framed mobile field-tool experience (see [mobile/README.md](mobile/README.md))
+
 ## Run it
 
 Just open `index.html` in a browser. Or:
