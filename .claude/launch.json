@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "-l", "5180", "/Users/aaronphillips/GIT/golf-cart-shop-os-demo"],
+      "port": 5180
+    }
+  ]
+}
